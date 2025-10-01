@@ -1,6 +1,6 @@
 
   {
-      "name": "Responsive Trading App UI",
+      "name": "Trading ConceptB",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -54,6 +54,7 @@
       },
       "scripts": {
           "dev": "vite",
-          "build": "vite build"
+          "build": "tsc",
+          "start": "node dist/index.js"
       }
   }
