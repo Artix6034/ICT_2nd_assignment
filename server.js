@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-require('dotenv').config();
 
 const { connectDB } = require('./config/db'); // make sure path is config/db.js
 const authRoutes = require('./controllers/authController');
