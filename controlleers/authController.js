@@ -1,5 +1,6 @@
 const { User, Portfolio } = require('../models');
 const jwt = require('jsonwebtoken');
+import pool from "../db.js";
 
 // Generate JWT token
 const generateToken = (userId) => {
@@ -115,6 +116,7 @@ exports.getMe = async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch user' });
   }
 };
+const result = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
 
 // @desc    Logout user (client-side token removal)
 // @route   POST /api/auth/logout
