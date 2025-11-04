@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import "./db.js"; // <--- important
 
 const app = express();
 app.use(cors());
