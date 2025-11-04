@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db.js'; // ✅ correct path
 require('dotenv').config();
 
+const { connectDB } = require('./config/db'); // make sure path is config/db.js
+const authRoutes = require('./controllers/authController');
+
 dotenv.config();
 const app = express();
 
